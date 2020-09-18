@@ -371,25 +371,259 @@ Zaxxon-v0:
   type: atari
   actionSpace:
 Acrobot-v1:
-  type: atari
+  type: classic-control
   actionSpace:
 CartPole-v1:
-  type: atari
+  type: classic-control
   actionSpace:
     - left
     - right
 MountainCar-v0:
-  type: atari
+  type: classic-control
   actionSpace:
     - left
     - noop
     - right
 MountainCarContinuous-v0:
-  type: atari
+  type: classic-control
   actionSpace:
 Pendulum-v0:
-  type: atari
+  type: classic-control
   actionSpace:
+BipedalWalker-v2:
+  type: box2d
+  actionSpace:
+BipedalWalkerHardcore-v2:
+  type: box2d
+  actionSpace:
+CarRacing-v0:
+  type: box2d
+  actionSpace:
+LunarLander-v2:
+  type: box2d
+  actionSpace:
+    - noop
+    - left
+    - up
+    - right
+LunarLanderContinuous-v2:
+  type: box2d
+  actionSpace:
+SuperMarioBros-v0:
+  type: gym-super-mario-bros
+  actionSpace:
+    - RIGHT_ONLY:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+    - SIMPLE_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+    - COMPLEX_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+      - leftA
+      - leftB
+      - leftAB
+      - down
+      - up
+SuperMarioBros-v1:
+  type: gym-super-mario-bros
+  actionSpace:
+    - RIGHT_ONLY:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+    - SIMPLE_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+    - COMPLEX_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+      - leftA
+      - leftB
+      - leftAB
+      - down
+      - up
+SuperMarioBros-v2:
+  type: gym-super-mario-bros
+  actionSpace:
+    - RIGHT_ONLY:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+    - SIMPLE_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+    - COMPLEX_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+      - leftA
+      - leftB
+      - leftAB
+      - down
+      - up
+SuperMarioBros-v3:
+  type: gym-super-mario-bros
+  actionSpace:
+    - RIGHT_ONLY:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+    - SIMPLE_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+    - COMPLEX_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+      - leftA
+      - leftB
+      - leftAB
+      - down
+      - up
+SuperMarioBros-v4:
+  type: gym-super-mario-bros
+  actionSpace:
+    - RIGHT_ONLY:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+    - SIMPLE_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+    - COMPLEX_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+      - leftA
+      - leftB
+      - leftAB
+      - down
+      - up
+SuperMarioBros2-v0:
+  type: gym-super-mario-bros
+  actionSpace:
+    - RIGHT_ONLY:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+    - SIMPLE_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+    - COMPLEX_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+      - leftA
+      - leftB
+      - leftAB
+      - down
+      - up
+SuperMarioBros2-v1:
+  type: gym-super-mario-bros
+  actionSpace:
+    - RIGHT_ONLY:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+    - SIMPLE_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+    - COMPLEX_MOVEMENT:
+      - noop
+      - right
+      - rightA
+      - rightB
+      - rightAB
+      - A
+      - left
+      - leftA
+      - leftB
+      - leftAB
+      - down
+      - up
+
+
+
+
+
 
 
 
