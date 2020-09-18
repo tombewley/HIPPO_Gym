@@ -1,0 +1,397 @@
+AirRaid-ram-v0:
+  type: atari
+  actionSpace:
+AirRaid-v0:
+  type: atari
+  actionSpace:
+Alien-ram-v0:
+  type: atari
+  actionSpace:
+Alien-v0:
+  type: atari
+  actionSpace:
+Amidar-ram-v0:
+  type: atari
+  actionSpace:
+Amidar-v0:
+  type: atari
+  actionSpace:
+Assault-ram-v0:
+  type: atari
+  actionSpace:
+Assault-v0:
+  type: atari
+  actionSpace:
+Asterix-ram-v0:
+  type: atari
+  actionSpace:
+Asterix-v0:
+  type: atari
+  actionSpace:
+Asteroids-ram-v0:
+  type: atari
+  actionSpace:
+Asteroids-v0:
+  type: atari
+  actionSpace:
+Atlantis-ram-v0:
+  type: atari
+  actionSpace:
+Atlantis-v0:
+  type: atari
+  actionSpace:
+BankHeist-ram-v0:
+  type: atari
+  actionSpace:
+BankHeist-v0:
+  type: atari
+  actionSpace:
+BattleZone-ram-v0:
+  type: atari
+  actionSpace:
+BattleZone-v0:
+  type: atari
+  actionSpace:
+BeamRider-ram-v0:
+  type: atari
+  actionSpace:
+BeamRider-v0:
+  type: atari
+  actionSpace:
+Berzerk-ram-v0:
+  type: atari
+  actionSpace:
+Berzerk-v0:
+  type: atari
+  actionSpace:
+Bowling-ram-v0:
+  type: atari
+  actionSpace:
+Bowling-v0:
+  type: atari
+  actionSpace:
+Boxing-ram-v0:
+  type: atari
+  actionSpace:
+Boxing-v0:
+  type: atari
+  actionSpace:
+Breakout-ram-v0:
+  type: atari
+  actionSpace:
+Breakout-v0:
+  type: atari
+  actionSpace:
+Carnival-ram-v0:
+  type: atari
+  actionSpace:
+Carnival-v0:
+  type: atari
+  actionSpace:
+Centipede-ram-v0:
+  type: atari
+  actionSpace:
+Centipede-v0:
+  type: atari
+  actionSpace:
+ChopperCommand-ram-v0:
+  type: atari
+  actionSpace:
+ChopperCommand-v0:
+  type: atari
+  actionSpace:
+CrazyClimber-ram-v0:
+  type: atari
+  actionSpace:
+CrazyClimber-v0:
+  type: atari
+  actionSpace:
+DemonAttack-ram-v0:
+  type: atari
+  actionSpace:
+DemonAttack-v0:
+  type: atari
+  actionSpace:
+DoubleDunk-ram-v0:
+  type: atari
+  actionSpace:
+DoubleDunk-v0:
+  type: atari
+  actionSpace:
+ElevatorAction-ram-v0:
+  type: atari
+  actionSpace:
+ElevatorAction-v0:
+  type: atari
+  actionSpace:
+Enduro-ram-v0:
+  type: atari
+  actionSpace:
+Enduro-v0:
+  type: atari
+  actionSpace:
+FishingDerby-ram-v0:
+  type: atari
+  actionSpace:
+FishingDerby-v0:
+  type: atari
+  actionSpace:
+Freeway-ram-v0:
+  type: atari
+  actionSpace:
+Freeway-v0:
+  type: atari
+  actionSpace:
+Frostbite-ram-v0:
+  type: atari
+  actionSpace:
+Frostbite-v0:
+  type: atari
+  actionSpace:
+Gopher-ram-v0:
+  type: atari
+  actionSpace:
+Gopher-v0:
+  type: atari
+  actionSpace:
+Gravitar-ram-v0:
+  type: atari
+  actionSpace:
+Gravitar-v0:
+  type: atari
+  actionSpace:
+IceHockey-ram-v0:
+  type: atari
+  actionSpace:
+IceHockey-v0:
+  type: atari
+  actionSpace:
+Jamesbond-ram-v0:
+  type: atari
+  actionSpace:
+Jamesbond-v0:
+  type: atari
+  actionSpace:
+JourneyEscape-ram-v0:
+  type: atari
+  actionSpace:
+JourneyEscape-v0:
+  type: atari
+  actionSpace:
+Kangaroo-ram-v0:
+  type: atari
+  actionSpace:
+Kangaroo-v0:
+  type: atari
+  actionSpace:
+Krull-ram-v0:
+  type: atari
+  actionSpace:
+Krull-v0:
+  type: atari
+  actionSpace:
+KungFuMaster-ram-v0:
+  type: atari
+  actionSpace:
+KungFuMaster-v0:
+  type: atari
+  actionSpace:
+MontezumaRevenge-ram-v0:
+  type: atari
+  actionSpace:
+MontezumaRevenge-v0:
+  type: atari
+  actionSpace:
+MsPacman-ram-v0:
+  type: atari
+  actionSpace:
+    - noop
+    - up
+    - right
+    - left
+    - down
+    - upright
+    - upleft
+    - downright
+    - downleft
+MsPacman-v0:
+  type: atari
+  actionSpace:
+    - noop
+    - up
+    - right
+    - left
+    - down
+    - upright
+    - upleft
+    - downright
+    - downleft
+NameThisGame-ram-v0:
+  type: atari
+  actionSpace:
+NameThisGame-v0:
+  type: atari
+  actionSpace:
+Phoenix-ram-v0:
+  type: atari
+  actionSpace:
+Phoenix-v0:
+  type: atari
+  actionSpace:
+Pitfall-ram-v0:
+  type: atari
+  actionSpace:
+Pitfall-v0:
+  type: atari
+  actionSpace:
+Pong-ram-v0:
+  type: atari
+  actionSpace:
+Pong-v0:
+  type: atari
+  actionSpace:
+Pooyan-ram-v0:
+  type: atari
+  actionSpace:
+Pooyan-v0:
+  type: atari
+  actionSpace:
+PrivateEye-ram-v0:
+  type: atari
+  actionSpace:
+PrivateEye-v0:
+  type: atari
+  actionSpace:
+Qbert-ram-v0:
+  type: atari
+  actionSpace:
+Qbert-v0:
+  type: atari
+  actionSpace:
+Riverraid-ram-v0:
+  type: atari
+  actionSpace:
+Riverraid-v0:
+  type: atari
+  actionSpace:
+RoadRunner-ram-v0:
+  type: atari
+  actionSpace:
+RoadRunner-v0:
+  type: atari
+  actionSpace:
+Robotank-ram-v0:
+  type: atari
+  actionSpace:
+Robotank-v0:
+  type: atari
+  actionSpace:
+Seaquest-ram-v0:
+  type: atari
+  actionSpace:
+Seaquest-v0:
+  type: atari
+  actionSpace:
+Skiing-ram-v0:
+  type: atari
+  actionSpace:
+Skiing-v0:
+  type: atari
+  actionSpace:
+Solaris-ram-v0:
+  type: atari
+  actionSpace:
+Solaris-v0:
+  type: atari
+  actionSpace:
+SpaceInvaders-ram-v0:
+  type: atari
+  actionSpace:
+SpaceInvaders-v0:
+  type: atari
+  actionSpace:
+StarGunner-ram-v0:
+  type: atari
+  actionSpace:
+StarGunner-v0:
+  type: atari
+  actionSpace:
+Tennis-ram-v0:
+  type: atari
+  actionSpace:
+Tennis-v0:
+  type: atari
+  actionSpace:
+TimePilot-ram-v0:
+  type: atari
+  actionSpace:
+TimePilot-v0:
+  type: atari
+  actionSpace:
+Tutankham-ram-v0:
+  type: atari
+  actionSpace:
+Tutankam-v0:
+  type: atari
+  actionSpace:
+UpNDown-ram-v0:
+  type: atari
+  actionSpace:
+UpNDown-v0:
+  type: atari
+  actionSpace:
+Venture-ram-v0:
+  type: atari
+  actionSpace:
+Venture-v0:
+  type: atari
+  actionSpace:
+VideoPinball-ram-v0:
+  type: atari
+  actionSpace:
+VideoPinball-v0:
+  type: atari
+  actionSpace:
+WizardOfWar-ram-v0:
+  type: atari
+  actionSpace:
+WizardOfWar-v0:
+  type: atari
+  actionSpace:
+YarsRevenge-ram-v0:
+  type: atari
+  actionSpace:
+YarsRevenge-v0:
+  type: atari
+  actionSpace:
+Zaxxon-ram-v0:
+  type: atari
+  actionSpace:
+Zaxxon-v0:
+  type: atari
+  actionSpace:
+Acrobot-v1:
+  type: atari
+  actionSpace:
+CartPole-v1:
+  type: atari
+  actionSpace:
+    - left
+    - right
+MountainCar-v0:
+  type: atari
+  actionSpace:
+    - left
+    - noop
+    - right
+MountainCarContinuous-v0:
+  type: atari
+  actionSpace:
+Pendulum-v0:
+  type: atari
+  actionSpace:
+
+
+
+
+
