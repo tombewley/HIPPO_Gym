@@ -227,15 +227,41 @@ class Trial():
 
     def send_ui(self):
         defaultUI = ['left','right','up','down','start','pause']
+        
+        # previous block
+        image = open('images/log_block.png', 'rb')
+        image_read = image.read()
+        previousBlock = base64.b64encode(image_read).decode('utf-8')
+        image.close()
+
+        # current block
+        image = open('images/plank_block.png', 'rb')
+        image_read = image.read()
+        currentBlock = base64.b64encode(image_read).decode('utf-8')
+        image.close()
+
+        # next block
+        image = open('images/crafting_bench.png', 'rb')
+        image_read = image.read()
+        nextBlock = base64.b64encode(image_read).decode('utf-8')
+        image.close()
+
+        curr = 7 # the current position
+        total = 20 # the total number of blocks
         try:
             self.pipe.send(json.dumps({'UI': self.config.get('ui', defaultUI)}))
+            self.pipe.send(json.dumps(
+                {'previousBlock': {'image': previousBlock, 'value': -1, "name": f'{curr - 1}/{total}'},
+                'nextBlock': {'image': nextBlock, 'value': 1, "name": f'{curr + 1}/{total}'},
+                'currentBlock': {'image': currentBlock, 'value': 0, "name": f'{curr}/{total}'}}
+            ))
         except:
             raise TypeError("Render Dictionary is not JSON serializable")
 
     def take_step(self):
         '''
         Expects a dictionary return with all the values that should be recorded.
-        Records return and saves all memory associated with this setp.
+        Records return and saves all memory associated with this setup.
         Checks for DONE from Agent/Env
         '''
         envState = self.agent.step(self.humanAction)
