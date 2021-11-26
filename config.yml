@@ -30,19 +30,22 @@ project:
 trial:
   actionBufferLifespan: 1 # int
   maxEpisodes: 20 # int
-  game: MsPacman-v0 # full environment name
+  game: MountainCar-v0 # full environment name
   dataFile: episode # episode or trial
   s3upload: True
   actionSpace: # the appropriate action space for environment. Order matters
-    - noop
-    - up
-    - right
+    # - noop
+    # - up
+    # - right
+    # - left
+    # - down
+    # - upright
+    # - upleft
+    # - downright
+    # - downleft
     - left
-    - down
-    - upright
-    - upleft
-    - downright
-    - downleft
+    - noop
+    - right
   frameRateStepSize: 5 # int Optional if allowFrameRateChange = False
   minFrameRate: 1 # int Optional if allowFrameRateChange = False
   maxFrameRate: 60 # int Optional if allowFrameRateChange = False
@@ -51,8 +54,8 @@ trial:
   ui: # to include ui button set to True, False buttons will not be shown
     left: True
     right: True
-    up: True
-    down: True
+    up: False
+    down: False
     start: True
     stop: True
     pause: True
@@ -64,4 +67,3 @@ trial:
     fpsSet: False
     fpsUp: False
     fpsDown: False
-

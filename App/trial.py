@@ -17,12 +17,12 @@ class Trial():
         self.config = load_config()
         self.pipe = pipe
         self.frameId = 0
-        self.humanAction = 0
+        self.humanAction = self.config.get('actionSpace').index('noop') # Initialise with noop action 
         self.episode = 0
         self.done = False
         self.play = False
-        self.record = []
-        self.nextEntry = {}
+        self.trial_log = []
+        self.ep_log = []
         self.trialId = shortuuid.uuid()
         self.outfile = None
         self.framerate = self.config.get('startingFrameRate', 30)
@@ -90,7 +90,7 @@ class Trial():
         '''
         Closes the environment through the agent, closes any remaining outfile
         and sends the 'done' message to the websocket pipe. If logging the 
-        whole trial memory in self.record, uncomment the call to self.save_record()
+        whole trial memory in self.trial_log, uncomment the call to self.save_record()
         to write the record to file before closing.
         '''
         self.pipe.send('done')
@@ -121,7 +121,7 @@ class Trial():
     def handle_message(self, message:dict):
         '''
         Reads messages sent from websocket, handles commands as priority then 
-        actions. Logs entire message in self.nextEntry
+        actions. Logs entire message in self.ep_log
         '''
         if not self.userId and 'userId' in message:
             self.userId = message['userId'] or f'user_{shortuuid.uuid()}'
@@ -134,6 +134,7 @@ class Trial():
         elif 'changeFrameRate' in message and message['changeFrameRate']:
             self.handle_framerate_change(message['changeFrameRate'])
         elif 'action' in message and message['action']:
+            print(message)
             self.handle_action(message['action'])
         self.update_entry(message)
 
@@ -178,7 +179,6 @@ class Trial():
             except:
                 pass
 
-
     def handle_action(self, action:str):
         '''
         Translates action to int and resets action buffer if action !=0
@@ -193,9 +193,9 @@ class Trial():
    
     def update_entry(self, update_dict:dict):
         '''
-        Adds a generic dictionary to the self.nextEntry dictionary.
+        Adds a generic dictionary to the self.ep_log list.
         '''
-        self.nextEntry.update(update_dict)
+        self.ep_log.append(update_dict)
 
     def get_render(self):
         '''
@@ -240,13 +240,13 @@ class Trial():
         '''
         envState = self.agent.step(self.humanAction)
         self.update_entry(envState)
-        self.save_entry()
         if envState['done']:
+            self.save_entry()
             self.reset()
 
     def save_entry(self):
         '''
-        Either saves step memory to self.record list or pickles the memory and
+        Either saves step memory to self.trial_log list or pickles the memory and
         writes it to file, or both.
         Note that observation and render objects can get large, an episode can
         have several thousand steps, holding all the steps for an episode in 
@@ -257,19 +257,19 @@ class Trial():
         comment/uncomment the below lines as desired.
         '''
         if self.config.get('dataFile') == 'trial':
-            self.record.append(self.nextEntry)
+            self.trial_log.append(self.ep_log)
         else:
-            cPickle.dump(self.nextEntry, self.outfile)
-            self.nextEntry = {}
+            cPickle.dump(self.ep_log, self.outfile)
+            self.ep_log = []
 
     def save_record(self):
         '''
-        Saves the self.record object to file. Is only called if uncommented in
+        Saves the self.trial_log object to file. Is only called if uncommented in
         self.end(). To record full trial records a line must also be uncommented
         in self.save_entry() and self.create_file()
         '''
-        cPickle.dump(self.record, self.outfile)
-        self.record = []
+        cPickle.dump(self.trial_log, self.outfile)
+        self.trial_log = []
 
     def create_file(self):
         '''

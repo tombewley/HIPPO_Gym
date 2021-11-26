@@ -4,7 +4,9 @@ from multiprocessing import Process, Pipe
 from s3upload import Uploader
 import logging
 
-ADDRESS = None # set desired IP for development 
+# https://irll.net/?server=ws://localhost:5000
+
+ADDRESS = "localhost" # set desired IP for development 
 PORT = 5000 # if port is changed here it must also be changed in Dockerfile
 devEnv = False
 
@@ -12,7 +14,7 @@ logging.basicConfig(filename='server.log', level=logging.INFO)
 
 def main():
     '''
-    Check for command line arguement setting development environment.
+    Check for command line argument setting development environment.
     Start Websocket server at appropriate IP ADDRESS and PORT.
     '''
     global ADDRESS
